@@ -11,7 +11,7 @@ router.get('/all', async function (req, res) {
 			if (err) {
 				throw err;
 			}
-			res.send(rows);
+			res.send({ population: rows });
 		} catch (err) {
 			console.log(err);
 		}
