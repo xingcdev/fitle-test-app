@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
-const TableHeader = function (props) {
-	const { populationData } = props;
-
-	function getPropertyNames(json) {
-		return Object.keys(json);
-	}
-
-	let headers = getPropertyNames(populationData[0]);
-
-	headers = headers.map((row) => {
-		return <th>{row}</th>;
-	});
-
+const TableHeader = function () {
 	return (
 		<thead>
-			<tr>{headers}</tr>
+			<tr>
+				<th>Age</th>
+				<th>class of worker</th>
+				<th>industry code</th>
+				<th>occupation code</th>
+				<th>education</th>
+			</tr>
 		</thead>
 	);
 };
@@ -30,6 +24,7 @@ const TableBody = function (props) {
 				<td>{person['class of worker']}</td>
 				<td>{person['industry code']}</td>
 				<td>{person['occupation code']}</td>
+				<td>{person.education}</td>
 			</tr>
 		);
 	});
@@ -57,7 +52,7 @@ const Table = function () {
 	else {
 		return (
 			<table>
-				<TableHeader populationData={population} />
+				<TableHeader />
 				<TableBody populationData={population} />
 			</table>
 		);
