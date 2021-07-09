@@ -16,3 +16,29 @@ code {
 	max-width: 800px;
 	margin: 0 auto;
 }
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	max-width: 100%;
+	border: 1px solid #dedede;
+}
+
+thead th {
+	border-bottom: 1px solid #dedede;
+}
+
+tfoot th {
+	border-top: 1px solid #dedede;
+}
+
+td {
+	border-bottom: 1px solid #dedede;
+}
+
+th,
+td {
+	text-align: left;
+	padding: 0.5rem;
+}
